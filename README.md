@@ -31,3 +31,8 @@ def llr_acc(scores,LTE,thresh=0):
 
 As shown by default the threshold for the scores is 0, so if positive the prediction/inference correspond to Label A and if negative to label B
 
+LLR is equal to:
+LLR=ln(P(x|HT)/P(x|HF))
+Where P(x|HT) is the probability that the sample x belongs to class HT (True)
+And with P(x|HT) = 1 - P(x|HF), we can clear the equation for P(x|HT) obtaning the Sigmoid function, this means that we can convert from LLR/Score to probability using the sigmoid function.
+
